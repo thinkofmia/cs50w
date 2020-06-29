@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RecoBooks: {{ headline }}</title>
+        <link rel="stylesheet" href="template.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}">
+    </head>
+    <body>
+        <h1><a href="{{ url_for('index') }}">RecoBooks</a>: {{ headline }}</h1>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

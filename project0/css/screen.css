@@ -1,0 +1,80 @@
+/*
+This CSS is used to adjust the media size of the webapp. 
+*/
+@media (max-height: 199px), (max-width: 220px) {
+  #tooSmall {
+    display: inline;
+    font-weight: bold;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  table {
+    display: none;
+  }
+
+  #fillerText {
+    display: none;
+  }
+}
+@media (min-height: 200px) and (min-width: 221px) {
+  #tooSmall {
+    display: none;
+  }
+}
+@media (max-width: 499px) and (min-width: 221px) {
+  #optionsHeader::before {
+    content: "Options";
+  }
+
+  #galleryButton::before {
+    content: "Pics";
+  }
+
+  #listButton::before {
+    content: "List";
+  }
+
+  #signButton::before {
+    content: "Sign";
+  }
+
+  #aboutButton::before {
+    content: "About";
+  }
+}
+@media (min-width: 500px) {
+  #optionsHeader::before {
+    content: "Choose the following menu options: ";
+  }
+
+  #title, h1::before {
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  h1::before {
+    content: "Penguin Peninsula: ";
+  }
+
+  #galleryButton::before {
+    content: "Gallery";
+  }
+
+  #listButton::before {
+    content: "Inhabitants List";
+  }
+
+  #signButton::before {
+    content: "Sign Up";
+  }
+
+  #aboutButton::before {
+    content: "About Us";
+  }
+}
+
+/*# sourceMappingURL=screen.css.map */

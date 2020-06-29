@@ -1,0 +1,83 @@
+/*
+This CSS is used to adjust the media size of the webapp. 
+*/
+
+//Height
+@media (max-height:199px), (max-width:220px){//If height too small
+    #tooSmall{
+        display: inline;
+        font-weight: bold;
+    }
+    h1{
+        display: none;
+    }
+    table{
+        display: none;
+    }
+    #fillerText{
+        display: none;
+    }
+}
+
+@media(min-height:200px) and (min-width:221px){//If height is large enough
+    #tooSmall{
+        display: none;
+    }
+}
+
+//Width
+@media (max-width: 499px) and (min-width:221px){//If Width is too small
+    #optionsHeader::before{//Example of Pseudo-element Selector
+        content: "Options";
+    }
+
+    #galleryButton::before{//Example of Pseudo-element Selector
+        content: "Pics";
+    }
+    
+    #listButton::before{//Example of Pseudo-element Selector
+        content: "List";
+    }
+
+    #signButton::before{//Example of Pseudo-element Selector
+        content: "Sign";
+    }
+
+    #aboutButton::before{//Example of Pseudo-element Selector
+        content: "About";
+    }
+    
+}
+
+@media (min-width: 500px){//If width is wide enough
+    #optionsHeader::before{
+        content: "Choose the following menu options: ";
+    }
+
+    #title { //Example of id selector used
+        font-style: italic;
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    h1::before{//Example of Pseudo-element Selector
+        @extend #title;//Example of SCSS Inheritance
+        content: "Penguin Peninsula: ";
+    }
+
+    #galleryButton::before{//Example of Pseudo-element Selector
+        content: "Gallery";
+    }
+    
+    #listButton::before{//Example of Pseudo-element Selector
+        content: "Inhabitants List";
+    }
+
+    #signButton::before{//Example of Pseudo-element Selector
+        content: "Sign Up";
+    }
+
+    #aboutButton::before{//Example of Pseudo-element Selector
+        content: "About Us";
+    }
+}

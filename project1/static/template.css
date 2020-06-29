@@ -1,0 +1,35 @@
+/* Default Tags */
+body {
+  background-color: yellow;
+  color: black;
+  text-align: center;
+}
+
+table, .bookTables {
+  position: relative;
+  text-align: center;
+  left: 33%;
+  border-collapse: collapse;
+}
+table th, .bookTables th, table td, .bookTables td {
+  border: 1px solid black;
+}
+table th, .bookTables th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Custom Tags */
+.searchBox {
+  font-size: large;
+  display: inline-flex;
+}
+.searchBox form button {
+  height: 50%;
+}
+
+.bookTables {
+  left: 42.5%;
+}
+
+/*# sourceMappingURL=template.css.map */

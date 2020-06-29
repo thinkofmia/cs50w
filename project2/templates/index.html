@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flack Chat: {{ headline }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}">
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--Scripts-->
+        <script type="text/javascript" src="/static/flackChat.js"></script>
+        <!--Main Body-->
+        <h1><a href="{{ url_for('index') }}">Flack Chat</a>: {{ headline }}</h1>
+        <div class="hide" id="loginform">
+            <h2>Welcome to Flack Chat!</h2>
+            <form id="firstTimeForm">
+                <label for="dname">Display name:</label>
+                <input type="text" id="dname" name="dname" placeholder="Type in a display name to get started. ">
+                <input type="submit" value="Submit"><br>
+                <span id="loginmessage"></span>
+            </form> 
+        </div>
+        <div class="hide" id="contents">
+            <h2>Welcome back to Flack Chat, <span id="displayname"></span>!</h2>
+            {% block body %}
+            {% endblock %} 
+            <br>
+            <a href = "{{ url_for('profile')}}">Profile</a><br>
+            <a onclick="clearLastChannel();" href = "{{ url_for('index') }}">Switch Channel</a><br>
+            <a class="logout" >Logout</a><br>
+        </div>
+        <script>fixDisplayName();</script>
+    </body>
+</html>

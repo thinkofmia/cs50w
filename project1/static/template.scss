@@ -1,0 +1,40 @@
+//Variables
+$bg: yellow;
+$font: black;
+
+/* Default Tags */
+body {
+    background-color: $bg;
+    color: $font;
+    text-align: center;
+}
+
+table {
+    position: relative;
+    text-align: center;
+    left: 33%;
+    border-collapse: collapse;
+    th, td {
+        border: 1px solid black;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+}
+
+/* Custom Tags */
+.searchBox {
+    font-size: large;
+    display: inline-flex; 
+    form {
+        button {
+            height: 50%;
+        }
+    }
+}
+
+.bookTables {
+    @extend table;
+    left: 42.5%;
+}

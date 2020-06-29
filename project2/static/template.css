@@ -1,0 +1,106 @@
+/* Default Tags */
+body {
+  background-color: yellow;
+  color: black;
+  text-align: center;
+  width: 100vw;
+}
+
+table, .channeldisplay {
+  margin: 0px auto;
+  position: relative;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table td, .channeldisplay td, table th, .channeldisplay th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+/* Custom Tags */
+#pictures {
+  padding: 2vw;
+}
+#pictures .displaypic {
+  width: 10vw;
+  height: 10vw;
+  padding: 1vw;
+}
+#pictures .displaypic:hover {
+  cursor: pointer;
+}
+#pictures .displaypic.active {
+  background-color: green;
+}
+
+#posts {
+  height: 60vh;
+  overflow-y: scroll;
+  text-align: left;
+  width: 90vw;
+}
+#posts .post {
+  margin-top: 2vw;
+  position: relative;
+  border-style: inset;
+  padding: 1vw;
+  border-top-color: yellow;
+  border-left-color: gold;
+  font-size: 1.5vw;
+  word-wrap: break-word;
+  width: 95%;
+}
+#posts .post .displaypic {
+  width: 5vw;
+  height: 5vw;
+}
+#posts .post .timestamp, #posts .post .deleteButton {
+  position: absolute;
+  right: 1vw;
+  display: inline;
+  font-size: 1vw;
+  top: -1.5vw;
+}
+#posts .post .deleteButton {
+  color: red;
+  border-style: dotted;
+  top: 0.25vw;
+  right: 0.25vw;
+}
+#posts .post .deleteButton:hover {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.logout {
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+}
+
+.formmessage {
+  color: red;
+}
+
+.channeldisplay {
+  width: 90vw;
+  background: white;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+#newmsg {
+  width: 90%;
+}
+
+.displayname, .senderName {
+  color: blue;
+  text-decoration: bold;
+}
+
+/*# sourceMappingURL=template.css.map */

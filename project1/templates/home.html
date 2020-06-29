@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+
+{% block body %}
+    <h2>Welcome to RecoBooks!</h2>
+    <p>Choose the following:<br>
+        <a href = "{{ url_for('login') }}">Login Here</a><br>
+        <a href = "{{ url_for('register') }}">Register Here</a><br>
+    </p>
+{% endblock %}

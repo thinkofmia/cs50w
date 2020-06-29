@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block body %}
+    <h2>Search for Books</h2>
+    <p>Choose the following:<br>
+        <div class="searchBox">
+            <form action="{{ url_for('search') }}" method="post">
+              <input type="text" placeholder="Search for ISBN number of a book, the title of a book, or the author of a book. " name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div><br>
+        <a href = "{{ url_for('logout') }}">Logout</a><br>
+    </p>
+{% endblock %}

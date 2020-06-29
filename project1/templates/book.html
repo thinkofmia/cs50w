@@ -1,0 +1,60 @@
+{% extends "index.html" %}
+
+{% block body %}
+    <!--Book Info-->
+    <table  class="bookTables">
+      <tr>
+        <th>ISBN</th>
+        <td>{{book.isbn}}</td>
+      </tr>
+      <tr>
+        <th>Title</th>
+        <td>{{book.title}}</td>
+      </tr>
+      <tr>
+        <th>Author</th>
+        <td>{{book.author}}</td>
+      </tr>
+      <tr>
+        <th>Year</th>
+        <td>{{book.year}}</td>
+      </tr>
+    </table><br>
+
+    <h4>Submit a Review</h4>
+    {% if errorMsg != "" %}
+      <span style="color:red">{{errorMsg}}</span>
+    {% endif %}
+    <form action = "{{ url_for('checkBook', title=book.title) }}" method="post">
+      <label for="score">Score:</label><input type="number" placeholder="3" min="1" max="5" id="score" name="score"><br>
+      <label for="review">Review:</label><input type="text" placeholder="Type your review here! " id="review" name="review"><br>
+      <button>Submit</button>
+    </form>
+    <!--Our Reviews-->
+    <h3>RecoBooks Reviews</h3>
+    {% if ourReviews|length %}
+    <table class="bookTables">
+      <tr>
+        <th>Reviewer</th>
+        <th>Score</th>
+        <th>Review</th>
+      </tr>
+        {% for item in ourReviews %}
+        <tr>
+          <td>{{item.reviewer}}</td>
+          <td>{{item.score}}</a></td>
+          <td>{{item.review}}</td>
+          </tr>
+        {% endfor %}
+      </table><br>
+    {% else %}
+      No reviews yet!
+    {% endif %}
+
+    <!--Goodreads Reviews-->
+    <h3>Goodreads Reviews</h3>
+    Work Ratings: {{ goodReadReviews['work_ratings_count'] }}<br>
+    Average Ratings: {{ goodReadReviews['average_rating']}}<br>
+    <a href = "{{ url_for('search') }}">Search for another Book.</a><br>
+    <a href = "{{ url_for('logout') }}">Logout</a><br>
+{% endblock %}

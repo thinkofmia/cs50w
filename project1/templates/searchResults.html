@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block body %}
+    <h3>Search Box</h3>  
+    <div class="searchBox">
+        <form action="{{ url_for('search') }}" method="post">
+          <input width="100px" type="text" placeholder="Search for ISBN, title or author. " name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div><br>
+    <h2>Search Results</h2>
+    <table>
+      <tr>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+      </tr>
+      {% for item in search_list %}
+      <tr>
+         <td>{{item.isbn}}</td>
+         <td><a href="/book/{{item.title}}" >{{item.title}}</a></td>
+         <td>{{item.author}}</td>
+         <td>{{item.year}}</td>
+         </tr>
+      {% endfor %}
+    </table><br>
+    <a href = "{{ url_for('logout') }}">Logout</a><br>
+{% endblock %}

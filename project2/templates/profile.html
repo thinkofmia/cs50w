@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block body %}
+<!--Scripts-->
+<script type="text/javascript" src="/static/profile.js"></script>
+<!--Main Body-->
+    <div id = "pictures">
+        <img onclick="selectPic(1);" id="profile-1" class="displaypic" src="/static/images/1.jpg"></img>
+        <img onclick="selectPic(2);" id="profile-2" class="displaypic" src="/static/images/2.jpg"></img>
+        <img onclick="selectPic(3);" id="profile-3" class="displaypic" src="/static/images/3.jpg"></img>
+        <img onclick="selectPic(4);" id="profile-4" class="displaypic" src="/static/images/4.jpg"></img>
+        <img onclick="selectPic(5);" id="profile-5" class="displaypic" src="/static/images/5.jpg"></img>
+        <img onclick="selectPic(6);" id="profile-6" class="displaypic" src="/static/images/6.jpg"></img>
+        <img onclick="selectPic(7);" id="profile-7" class="displaypic" src="/static/images/7.jpg"></img>
+        <img onclick="selectPic(8);" id="profile-8" class="displaypic" src="/static/images/8.jpg"></img>
+        <img onclick="selectPic(9);" id="profile-9" class="displaypic" src="/static/images/9.jpg"></img>
+        <img onclick="selectPic(10);" id="profile-10" class="displaypic" src="/static/images/10.jpg"></img>
+        <img onclick="selectPic(11);" id="profile-11" class="displaypic" src="/static/images/11.jpg"></img>
+        <img onclick="selectPic(12);" id="profile-12" class="displaypic" src="/static/images/12.jpg"></img>
+        <img onclick="selectPic(13);" id="profile-13" class="displaypic" src="/static/images/13.jpg"></img>
+        <img onclick="selectPic(14);" id="profile-14" class="displaypic" src="/static/images/14.jpg"></img>
+        <img onclick="selectPic(15);" id="profile-15" class="displaypic" src="/static/images/15.jpg"></img>
+        <img onclick="selectPic(16);" id="profile-16" class="displaypic" src="/static/images/16.jpg"></img>
+    </div>
+    <div id="profilesdata" class="hide">{{ profiles }}</div> 
+{% endblock %}

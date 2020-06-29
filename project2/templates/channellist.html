@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block body %}
+    <table>
+        <tr><th>List of Available Channels</th></tr>
+    {% for channel in channels %}
+        <tr><td><a href="/channel/{{ channel.name }}" >{{ channel.name }}</a></td></tr>
+    {% endfor %}
+        <tr><td>
+            <form id="newchannelform" action = "{{ url_for('index') }}" method="post">
+                <label for="newchannel">New Channel: </label>
+                <input type="text" id="newchannel" name="newchannel" placeholder="Add a channel. ">
+                <input type="submit" value="add"><br>
+                <span class="formmessage">{{ msg }}</span>
+            </form> 
+        </td></tr>
+    </table>
+    <script>
+        //Redirect to last Channel if any
+        redirectToChannel();
+    </script>
+{% endblock %}

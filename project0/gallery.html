@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Penguin Peninsula: Gallery</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/extra.css">
+        <link rel="stylesheet" href="css/screen.css">
+    </head>
+    <body id="screen">
+        <h1>Gallery</h1>
+        <h2 id="tooSmall">Please enlarge your screen. </h2>
+        <table class="directory table table-bordered">  <!--Example of table used-->
+            <tr>
+                <th colspan="12" class = "thead-dark" id="optionsHeader"></th>
+            </tr>
+            <tr>
+                <!--Links to the other HTML Pages used-->
+                <td class = "col-3" title="Go back to the home page. ">
+                <a href="gallery.html" id="galleryButton"></a>
+            </td>
+            <td class = "col-3" title="Check out who is living here right now. ">
+                <a href="inhabitants.html" id="listButton"></a>
+            </td>
+            <td class = "col-3" title="Sign up to be an inhabitant of the Penguin Peninsula today! ">
+                <a href="signUp.html" id="signButton"></a>
+            </td>
+            <td class = "col-3" title="Check out more information about us. ">
+                <a href="index.html" id="aboutButton"></a>
+            </td>
+            </tr>
+        </table>
+        <table id="galleryTable" class="table table-bordered"> <!--Another use of table-->
+            <tr>
+                <td class = "col-3" title="Front View">
+                    <img src="images/frontView.jpg" class="img-rounded galleryIcons" alt="Front View"> 
+                    <br>Front View
+                </td>
+                <td class = "col-3" title="Back View">
+                    <img src="images/backView.jpg" class="img-rounded galleryIcons" alt="Back View"> 
+                    <br>Back View
+                </td>
+                <td class = "col-3" title="Sea View">
+                    <img src="images/seaView.jpg" class="img-rounded galleryIcons" alt="Sea View"> 
+                    <br>Sea View</td>
+                </td>
+                <td class = "col-3" title="Night View">
+                    <img src="images/nightView.jpg" class="img-rounded galleryIcons" alt="Night View"> 
+                    <br>Night View</td>
+            </tr>
+        </table>
+        <!--Example of image used-->
+        <img id="coverPage" class="img-fluid" src="images/background.jpeg" alt="Penguin Peninsula"> 
+    </body>
+</html>

@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+
+{% block body %}
+<!--Scripts-->
+<script type="text/javascript" src="/static/channel.js"></script>
+<!--Main Body-->
+    <table class="channeldisplay">
+        <tr>
+            <th><h2></h2>Messages in channel <span id="channelname">{{ headline }}</span></h2></th>
+        </tr>
+        <tr><td><div id = "posts">
+        {% if messages|length %}
+            {% for message in messages %}
+                <div id = "{{ message.timestamp }}{{ message.sender }}" class="post">
+                    <img class="displaypic" src="/static/images/1.jpg"></img>
+                    <span class="timestamp">{{ message.timestamp }}</span>
+                    <span class="senderName">{{ message.sender }}</span>: {{message.content}}
+                </div>
+            {% endfor %}
+        {% else %}
+            No messages posted yet. 
+        {% endif %}
+        </div>
+        </td></tr>
+    <tr><td>
+        <input type="text" id="newmsg" name="newmsg" placeholder="Send a message. ">
+        <input id="sendmsg" type="submit" value="Send"><br> 
+    </td></tr>
+    </table>
+    <div id="profilesdata" class="hide">{{ profiles }}</div>
+    <script>
+        //Set Channel as last channel
+        var channelname = document.querySelector('#channelname').innerHTML;
+        console.log(channelname);
+        setLastChannel(channelname);
+    </script>
+{% endblock %}

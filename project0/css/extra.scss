@@ -1,0 +1,128 @@
+//Variables
+$words: darkblue; //Example of using SCSS Variable
+$pageBg: lightgray;
+$tableBg: skyblue;
+$hoverFont: snow;
+
+//Base tags
+* {//Example of universal selector used
+    color: $words;
+}
+
+body {
+    background-color: $pageBg;
+    font-size: medium;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+p, h3 {//Example of grouping/multiple elements selector used
+    text-align: center;
+    font-weight: bold;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+ul{
+    font-size: larger;
+}
+
+//Custom Tags
+.directory {//Example of SCSS Nesting
+    border: 3px solid black;
+    border-collapse: collapse;
+    background-color: $tableBg;
+    text-align: center;
+    position: relative;
+    td{
+        @extend .directory;//Example of SCSS Inheritance
+        padding: 5px;
+        font-weight: bold;
+        a {//Example of SCSS Nesting and Child Selector
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+    th{
+        background-color: darkslategray;
+        color: $hoverFont;
+    }
+    td:hover{//Example of Pseudo Class Selector
+        background-color:teal;
+        cursor: pointer;
+        color: $hoverFont;
+        a{
+            color: $hoverFont;
+        }
+    }
+    
+    a:hover{
+        color: $hoverFont;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+#coverPage{ //Example of id selector used
+    opacity: 0.5;
+    position: absolute;
+    left:0%;
+    bottom: 0%;
+    z-index: -99;
+    width: 100%;
+    height: 100%;
+}
+
+#fillerText{//Example of id selector used
+    position: relative;
+    height: auto;
+    text-align: center;
+}
+
+.titlePosition{
+    font-weight: bold;
+}
+
+#chiefPosition::before{//Example of Pseudo-element Selector
+    @extend .titlePosition;//Example of SCSS Inheritance
+    content: "Chief of Refrigerator: ";
+}
+
+#managerPosition::before{//Example of Pseudo-element Selector
+    @extend .titlePosition;//Example of SCSS Inheritance
+    content: "Time Manager: ";
+}
+
+#orderlyPosition::before{//Example of Pseudo-element Selector
+    @extend .titlePosition;//Example of SCSS Inheritance
+    content: "Food Orderly: ";
+}
+
+.resident::before{//Example of Pseudo-element Selector
+    @extend .titlePosition;//Example of SCSS Inheritance
+    content: "Resident: ";
+}
+
+#galleryTable{
+    text-align: center;
+    position: relative;
+    background-color: darkblue;
+    tr{
+        width: 100%;
+    }
+    td{
+        padding: 5px;
+        font-weight: bold;
+        color: $hoverFont;
+    }
+}
+
+.galleryIcons {
+    width:100%;
+    height:100%;
+}

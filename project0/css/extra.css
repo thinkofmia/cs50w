@@ -1,0 +1,116 @@
+* {
+  color: darkblue;
+}
+
+body {
+  background-color: lightgray;
+  font-size: medium;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+p, h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+ul {
+  font-size: larger;
+}
+
+.directory, .directory td {
+  border: 3px solid black;
+  border-collapse: collapse;
+  background-color: skyblue;
+  text-align: center;
+  position: relative;
+}
+.directory td {
+  padding: 5px;
+  font-weight: bold;
+}
+.directory td a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.directory th {
+  background-color: darkslategray;
+  color: snow;
+}
+.directory td:hover {
+  background-color: teal;
+  cursor: pointer;
+  color: snow;
+}
+.directory td:hover a {
+  color: snow;
+}
+.directory a:hover {
+  color: snow;
+  text-align: center;
+  text-decoration: none;
+}
+
+#coverPage {
+  opacity: 0.5;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  z-index: -99;
+  width: 100%;
+  height: 100%;
+}
+
+#fillerText {
+  position: relative;
+  height: auto;
+  text-align: center;
+}
+
+.titlePosition, .resident::before, #orderlyPosition::before, #managerPosition::before, #chiefPosition::before {
+  font-weight: bold;
+}
+
+#chiefPosition::before {
+  content: "Chief of Refrigerator: ";
+}
+
+#managerPosition::before {
+  content: "Time Manager: ";
+}
+
+#orderlyPosition::before {
+  content: "Food Orderly: ";
+}
+
+.resident::before {
+  content: "Resident: ";
+}
+
+#galleryTable {
+  text-align: center;
+  position: relative;
+  background-color: darkblue;
+}
+#galleryTable tr {
+  width: 100%;
+}
+#galleryTable td {
+  padding: 5px;
+  font-weight: bold;
+  color: snow;
+}
+
+.galleryIcons {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=extra.css.map */

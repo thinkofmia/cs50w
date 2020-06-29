@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block body %}
+    Register here.<br>
+    <form action = "{{ url_for('welcome', mode='Register') }}" method="post">
+        <label for="username">User name:</label><input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><input type="text" id="password" name="password"><br>
+        <label for="repw">Retype Password:</label><input type="text" id="repw" name="repw"><br>
+        <button>Submit</button>
+    </form>
+{% endblock %}
